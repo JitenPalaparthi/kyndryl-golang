@@ -8,7 +8,7 @@ GOARCH
 
 # 25 keywords
 
-func, package,var
+case,default,else,fallthrough,func,if,package,switch,var
 
 # builtin 
 

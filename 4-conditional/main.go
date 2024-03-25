@@ -19,4 +19,11 @@ func main() {
 		println("not eligible for marriage")
 	}
 
+	//num>100?println("number is greater han 100"):println("num is less than or equal to 100")
+
+	if char := '池'; char <= 255 {
+		println(string(char), char, " is ASCII char")
+	} else {
+		println(string(char), char, " is not an ASCII char")
+	}
 }
