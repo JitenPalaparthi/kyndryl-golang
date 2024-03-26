@@ -4,6 +4,9 @@ import (
 	"math/rand"
 )
 
+// This demo is for escape analysis. Run the below command(with -gcflags) to see what gets allocated in heap
+// go run -gcflags="-m" main.go
+
 var map1 map[string]string
 
 const (
