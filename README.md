@@ -87,3 +87,9 @@ windows/arm64
 ```
 GOOS=windows GOARCH=arm64 && go build -ldflags="-s -w" -o hello-windows.exe main.go
 ```
+
+# Go Escape analysis
+
+```
+go build -o app main.go -gcflags="-m"
+```

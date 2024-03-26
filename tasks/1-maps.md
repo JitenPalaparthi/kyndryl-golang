@@ -6,3 +6,5 @@
 [10 -2]
 [12-3]
 etc..
+
+Which numbers have the highest duplicate elements?
