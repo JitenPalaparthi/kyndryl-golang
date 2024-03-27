@@ -15,6 +15,8 @@ func main() {
 	mymap1["560086"] = "Yeshvantpur"
 	mymap1["560096"] = "RajajiNagar"
 
+	delete(mymap1, "522000")
+
 	fmt.Println(mymap1)
 
 	v := mymap1["522000"]

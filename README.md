@@ -8,11 +8,11 @@ GOARCH
 
 # 25 keywords
 
-case,default,else,fallthrough,func,if,package,switch,var
+break,case,continue,const,default,else,fallthrough,for,func,goto,if,import,map,package,range,return,struct,switch,type,var
 
 # builtin 
 
-complex,println, print
+complex,println, print, cap, len, copy, append, delete, make, new 
 
 # Go mod
 
@@ -26,6 +26,13 @@ go mod init demo
 go build main.go # normal build
 go build -o hello main.go # build with a specific output file
 go build -ldflags "-s -w" -o hello1 main.go # stripe down build.
+```
+
+# install
+- it installs binaries from your local system or from the repos into the GOBIN directory
+
+```
+go install .
 ```
 # cross compilation
 
