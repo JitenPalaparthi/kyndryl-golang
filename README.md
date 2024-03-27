@@ -33,6 +33,7 @@ go build -ldflags "-s -w" -o hello1 main.go # stripe down build.
 
 ```
 go install .
+go install github.com/JitenPalaparthi/mathshapes@latest
 ```
 # cross compilation
 
