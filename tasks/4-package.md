@@ -4,7 +4,7 @@
 
 - User input parameters as any
 
-- let any access only numbers
+- let any access only numbers. [Dont do anything for strings, bool ect.]
 
 - call them in main function
 
