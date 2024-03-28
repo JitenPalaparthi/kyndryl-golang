@@ -8,8 +8,8 @@ GOARCH
 
 # 25 keywords
 
-break,case,continue,const,default,defer,else,fallthrough,for,func,goto,if,import,interface,map,package,range,return,struct,switch,type,var
-//chan, select ,go 
+break,case,continue,const,default,defer,else,fallthrough,for,func,go,goto,if,import,interface,map,package,range,return,struct,switch,type,var
+//chan, select
 
 # builtin 
 
