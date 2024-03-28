@@ -1,0 +1,1 @@
+- Write Calc with Add,Sub,Mul,Div funcions using generics
