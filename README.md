@@ -8,11 +8,13 @@ GOARCH
 
 # 25 keywords
 
-break,case,continue,const,default,else,fallthrough,for,func,goto,if,import,interface,map,package,range,return,struct,switch,type,var
+break,case,continue,const,default,defer,else,fallthrough,for,func,goto,if,import,interface,map,package,range,return,struct,switch,type,var
+//chan, select ,go 
 
 # builtin 
 
-complex,println, print, cap, len, copy, append, delete, make, new 
+complex,println, print, cap, len, copy, append, delete, make, new , panic, recover
+
 
 # Go mod
 

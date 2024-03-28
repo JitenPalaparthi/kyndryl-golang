@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-
 	r, err := calc.Add(10, 12.34)
 	if err != nil {
 		fmt.Println(err)
