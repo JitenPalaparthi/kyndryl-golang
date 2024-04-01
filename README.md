@@ -13,7 +13,7 @@ break,case,continue,const,default,defer,else,fallthrough,for,func,go,goto,if,imp
 
 # builtin 
 
-complex,println, print, cap, len, copy, append, delete, make, new , panic, recover
+complex,println, print, cap, len, copy, append, delete, make, new , panic, recover,close
 
 
 # Go mod
