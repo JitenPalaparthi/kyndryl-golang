@@ -8,16 +8,16 @@ import (
 
 func main() {
 
-	go func() {
-		for i := 1; i <= 10; i++ {
-			time.Sleep(time.Millisecond * 300)
-			fmt.Println(time.Now().Unix())
-		}
-	}()
-	ch := sender(10)
-	sum := receive(ch)
+	// go func() {
+	// 	for i := 1; i <= 10; i++ {
+	// 		time.Sleep(time.Millisecond * 300)
+	// 		fmt.Println(time.Now().Unix())
+	// 	}
+	// }()
+	ch := sender(3)
+	//sum :=
 
-	go fmt.Println("Sum of numbers:", <-sum)
+	fmt.Println("Sum of numbers:", <-receive(ch))
 
 	runtime.Goexit() // for simplicity using this .. use waitgroups instead
 }
@@ -36,9 +36,10 @@ func sender(num int) (ch chan int) {
 
 func receive(ch <-chan int) (sum chan int) {
 	sum = make(chan int)
-	func() {
-		s := 0
+	s := 0
+	go func() {
 		for v := range ch { // when using range loop always close the sender
+			fmt.Println(v)
 			s = s + v
 		}
 		sum <- s
