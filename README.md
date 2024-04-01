@@ -103,3 +103,43 @@ GOOS=windows GOARCH=arm64 && go build -ldflags="-s -w" -o hello-windows.exe main
 ```
 go build -o app main.go -gcflags="-m"
 ```
+
+# Test go code
+
+```go test -timeout 30s -run ^TestValidateFail$ demo/models```
+
+# All the files to be tested..
+
+```
+go test ./...
+```
+# Test a specific file
+
+```
+go test models/person_test.go 
+```
+# To Run file test
+
+```
+go test -timeout 30s -run ^(TestValidateSuccess|TestValidateFail)$ demo/models
+```
+
+
+# To write test coverage
+
+```
+go test -timeout 30s  demo/models -coverprofile cover.out
+```
+
+# To write to html outout of test coverate
+
+```
+go tool cover -html=cover.out 
+```
+# To check test coverage per func
+
+```
+go tool cover -func=cover.out
+```
+
+
