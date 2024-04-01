@@ -11,11 +11,16 @@ type Person struct {
 }
 
 func (p *Person) Validate() bool {
-	if p.Name == "" || p.Email == "" || p.ID == 0 {
+	if p.Name == "" || p.Email == "" {
 		return false
 	}
 	return true
 }
+
+// // TableName overrides the table name used by User to `profiles`
+// func (p *Person) TableName() string {
+// 	return "people"
+// }
 
 func (p *Person) ToString() (string, error) {
 	bytes, err := json.Marshal(p)
