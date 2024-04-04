@@ -1,0 +1,6 @@
+- IPC
+    - One proc can communicate to other proc using a protocol
+    - http -> localhost
+    - rpc -> 
+    - unix sockets
+    - grpc

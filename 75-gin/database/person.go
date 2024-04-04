@@ -27,3 +27,12 @@ func (p *Person) Delete(id string) (any, error) {
 	}
 	return tx.RowsAffected, nil
 }
+
+func (p *Person) Get(id string) (*models.Person, error) {
+	person := new(models.Person)
+	tx := p.DB.First(person, id)
+	if tx.Error != nil {
+		return nil, tx.Error
+	}
+	return person, nil
+}

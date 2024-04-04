@@ -62,3 +62,22 @@ func (p *Person) Delete(c *gin.Context) {
 	}
 	c.String(http.StatusAccepted, fmt.Sprint(result.(int64)))
 }
+
+func (p *Person) Get(c *gin.Context) {
+	fmt.Println("-----<")
+	id := c.Param("id")
+	fmt.Println("-----<", id)
+	if id == "" {
+		log.Println("Error:", "invalid id")
+		c.String(http.StatusBadRequest, "Invalid id")
+		c.Abort()
+	}
+	person, err := p.IPerson.Get(id)
+	if err != nil {
+		log.Println("Error:", err)
+		c.String(http.StatusBadRequest, "Invalid data")
+		c.Abort()
+		return
+	}
+	c.JSON(200, person)
+}

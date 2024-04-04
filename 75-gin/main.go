@@ -42,6 +42,7 @@ func main() {
 	phandler.IPerson = &personDb
 	phandler.FileName = "persons.txt"
 	r.POST("person/add", phandler.Add)
+	r.GET("person/:id", phandler.Get)
 	r.DELETE("person/:id", phandler.Delete)
 	r.Run(":" + PORT) // listen and serve on 0.0.0.0:8080
 }
